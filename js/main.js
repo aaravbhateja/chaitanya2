@@ -187,5 +187,11 @@ document.querySelectorAll(".coach,.plan").forEach((el) => {
 });
 
 /* ---------- 3D scene + loader ---------- */
-try { initScene($("#bg")); } catch (e) { console.warn("WebGL unavailable", e); }
+const hudPhase = $("#hudPhase"), hudRep = $("#hudRep");
+try {
+  initScene($("#bg"), {
+    reducedMotion: reduce,
+    onRep: ({ phase, rep }) => { hudPhase.textContent = phase; hudRep.textContent = String(Math.max(rep, 1)).padStart(2, "0"); },
+  });
+} catch (e) { console.warn("WebGL unavailable", e); }
 addEventListener("load", () => setTimeout(() => $("#loader").classList.add("done"), 900));
