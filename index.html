@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>On The C Fitness Club</title>
+<meta name="description" content="On The C Fitness Club: strength, functional training and expert coaching across three floors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="loader" id="loader"><span>OTC</span><i></i></div>
+<div class="cursor" id="cursor"></div>
+<div class="progress" id="progress"></div>
+<canvas id="bg"></canvas>
+
+<header class="nav" id="nav">
+  <a href="#top" class="logo">OTC<em>.</em></a>
+  <nav>
+    <a href="#coaches">Coaches</a>
+    <a href="#floors">Floors</a>
+    <a href="#plans">Memberships</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a href="#plans" class="btn btn-sm magnetic">Join now</a>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <p class="eyebrow reveal">On The C Fitness Club</p>
+    <h1 class="split" id="heroTitle">Lift<br>what moves<br><span class="outline">you.</span></h1>
+    <p class="lead reveal" id="tagline"></p>
+    <div class="hero-cta reveal">
+      <a href="#plans" class="btn magnetic">See memberships</a>
+      <a href="#coaches" class="btn ghost magnetic">Meet the coaches</a>
+    </div>
+    <div class="scroll-hint">Scroll<i></i></div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track"><span>Strength</span><span>Conditioning</span><span>Mobility</span><span>Fat loss</span><span>Community</span><span>Strength</span><span>Conditioning</span><span>Mobility</span><span>Fat loss</span><span>Community</span></div>
+  </div>
+
+  <section class="stats" id="stats"></section>
+
+  <section class="about">
+    <div class="about-copy">
+      <h2 class="reveal">Not a gym that<br>just opens its doors.</h2>
+      <p class="reveal">Three floors, five coaches and a floor that is busy for the right reasons. Whether it's your first week or your fifth year, there is a plan, a coach and a rack waiting for you.</p>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <section class="coaches" id="coaches">
+    <div class="sec-head">
+      <p class="eyebrow reveal">The team</p>
+      <h2 class="reveal">Five coaches.<br>One standard.</h2>
+      <p class="hint reveal">Tap a coach to read more</p>
+    </div>
+    <div class="coach-grid" id="coachGrid"></div>
+  </section>
+
+  <section class="floors" id="floors">
+    <div class="floors-sticky">
+      <div class="sec-head">
+        <p class="eyebrow">Inside the club</p>
+        <h2>Three floors.</h2>
+      </div>
+      <div class="floors-track" id="floorsTrack"></div>
+      <div class="floors-meter"><i id="floorsBar"></i></div>
+    </div>
+  </section>
+
+  <section class="plans" id="plans">
+    <div class="sec-head">
+      <p class="eyebrow reveal">Memberships</p>
+      <h2 class="reveal">Pick your<br>commitment.</h2>
+    </div>
+    <div class="plan-grid" id="planGrid"></div>
+    <p class="fine reveal">Prices in INR. Longer plans save more per month.</p>
+  </section>
+
+  <section class="visit" id="visit">
+    <h2 class="reveal">Come train<br>with us.</h2>
+    <div class="visit-grid reveal">
+      <div><h4>Address</h4><p id="vAddr"></p></div>
+      <div><h4>Hours</h4><p id="vHours"></p></div>
+      <div><h4>Call</h4><p><a id="vPhone"></a></p></div>
+      <div><h4>Follow</h4><p><a id="vIg" target="_blank" rel="noopener">@onthecfitnessclub</a></p></div>
+    </div>
+    <a id="vMap" class="btn magnetic" target="_blank" rel="noopener">Open in Google Maps</a>
+  </section>
+
+  <footer><span>© <span id="yr"></span> On The C Fitness Club</span><a href="#top">Back to top ↑</a></footer>
+</main>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="mName">
+    <button class="modal-x" id="modalX" aria-label="Close">×</button>
+    <div class="modal-photo" id="mPhoto"></div>
+    <div class="modal-body">
+      <p class="eyebrow" id="mRole"></p>
+      <h3 id="mName"></h3>
+      <p id="mBio"></p>
+      <div class="m-row"><b id="mYears"></b><span>years coaching</span></div>
+      <h5>Focus</h5><ul class="chips" id="mFocus"></ul>
+      <h5>Certifications</h5><ul class="chips" id="mCerts"></ul>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
